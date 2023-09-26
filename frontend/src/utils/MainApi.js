@@ -1,8 +1,8 @@
 import { handleSendingResponse } from "./utils"
 
-export const BASE_URL = "http://localhost:3000"
+//export const BASE_URL = "http://localhost:3000"
 
-//export const BASE_URL = 'https://api.';
+export const BASE_URL = 'https://api.alfred71038.movies.nomoredomainsrocks.ru';
 
 export const getUser = (token) => {
   return fetch(`${BASE_URL}/users/me`, {

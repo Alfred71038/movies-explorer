@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors({
   // origin: 'https://мое-доменное-имя',
-  origin: 'http://localhost:3001',
+  origin: 'https://alfred71038.movies.nomoredomainsrocks.ru',
   credentials: true,
 }));
 
