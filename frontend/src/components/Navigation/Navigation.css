@@ -1,0 +1,112 @@
+.navigation {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    justify-content: space-between;
+  }
+
+  .navigation__menu {
+    box-sizing: border-box;
+    padding: 159px 90px 90px 90px;
+    width: 520px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+
+  .navigation__container {
+    flex: 1 1 auto;
+  }
+
+  .navigation__close-button {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background-image: url(../../images/icon-menu-close.svg);
+    width: 22px;
+    height: 22px;
+    border: none;
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .navigation__close-button:hover {
+    opacity: 0.6;
+  }
+
+  .navigation__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .navigation__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    width: max-content;
+    border-bottom: 2px solid transparent;
+  }
+
+  .navigation__link_active {
+    color: #ff6838;
+  }
+
+  .navigation__link:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .navigation__account-button {
+    width: 100px;
+    min-height: 32px;
+    background-color: rgba(49, 49, 49, 1);
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .navigation__account-button:hover {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navigation__menu {
+    padding: 144px 10px 46px 10px;
+    width: 100%;
+  }
+
+  .navigation__container {
+    display: none;
+  }
+
+  .navigation__links {
+    gap: 15px;
+  }
+}
