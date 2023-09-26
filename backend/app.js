@@ -15,7 +15,10 @@ const app = express();
 
 app.use(cors({
   // origin: 'https://мое-доменное-имя',
-  origin: 'https://alfred71038.movies.nomoredomainsrocks.ru',
+  origin: ['https://alfred71038.movies.nomoredomainsrocks.ru',
+    'http://alfred71038.movies.nomoredomainsrocks.ru',
+    'http://localhost:3001',
+    'https://localhost:3001'],
 }));
 
 // подключаемся к серверу mongo
