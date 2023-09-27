@@ -4,7 +4,7 @@ import "./MoviesCardList.css"
 import MoviesCard from "../MoviesCard/MoviesCard"
 import SearchError from "../SearchError/SearchError"
 import Preloader from "../Preloader/Preloader"
-import { HIRES_ITEMS, DESKTOP_ITEMS, TABLET_ITEMS, MOBILE_ITEMS } from "../../utils/config"
+import { DESKTOP_ITEMS, TABLET_ITEMS, MOBILE_ITEMS, WITH_DISPLAY_DESKTOP, WITH_DISPLAY_TABLET, COUNT_EG, COUNT_FV, COUNT_TW, } from "../../utils/config"
 
 function MoviesCardList({
   cards,
@@ -24,15 +24,14 @@ function MoviesCardList({
   }
 
   function showDisplayFilm() {
-    const display = window.innerWidth
-    if (display > 1580) {
-      setShownMovies(16) // 16 карточек
-    } else if (display > 1180) {
-      setShownMovies(12) // 12 карточек
-    } else if (display > 767) {
-      setShownMovies(8) // 8 карточек
+    const display = window.innerWidth;
+
+    if (display >= WITH_DISPLAY_DESKTOP) {
+      setShownMovies(COUNT_TW); // 12 карточек
+    } else if (display <= WITH_DISPLAY_TABLET) {
+      setShownMovies(COUNT_FV); // 5 карточек
     } else {
-      setShownMovies(5) // 5 карточек
+      setShownMovies(COUNT_EG); // 8 карточек
     }
   }
 
@@ -40,6 +39,9 @@ function MoviesCardList({
     setTimeout(() => {
       window.addEventListener("resize", showDisplayFilm)
     }, 500)
+    return () => {
+      window.removeEventListener("resize", showDisplayFilm)
+    }
   })
 
   useEffect(() => {
@@ -48,11 +50,10 @@ function MoviesCardList({
 
   function showDisplayFilmPlayBtn() {
     const display = window.innerWidth
-    if (display > 1180) {
-      setShownMovies(shownMovies + HIRES_ITEMS)
-    } else if (display > 1180) {
+    if (display > WITH_DISPLAY_DESKTOP) {
       setShownMovies(shownMovies + DESKTOP_ITEMS)
-    } else if (display > 767) {
+    }
+    else if (display > WITH_DISPLAY_TABLET) {
       setShownMovies(shownMovies + TABLET_ITEMS)
     } else {
       setShownMovies(shownMovies + MOBILE_ITEMS)
