@@ -1,0 +1,152 @@
+.header {
+  position: relative;
+  padding: 0 70px;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  background: rgba(32, 32, 32, 1);
+  width: 1280px;
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    width: 100vw;
+  }
+}
+
+.header__links {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.header__links_films {
+  display: flex;
+  gap: 21px;
+  position: absolute;
+  left: 42%;
+}
+
+.header__button {
+  min-height: 32px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__button_active {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6838;
+  text-decoration: none;
+}
+
+.header__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.header__dark {
+  background: #202020;
+}
+
+.header__button-green {
+  color: #000;
+  background-color: #3ddc84;
+  min-width: 76px;
+  border-radius: 3px;
+}
+
+.header__account-btn {
+  width: 100px;
+  min-height: 32px;
+  background-color: rgba(49, 49, 49, 1);
+  border-radius: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  margin-left: 364px;
+}
+
+.header__account-image {
+  object-fit: cover;
+  width: 100px;
+  height: 32px;
+  padding-top: 4px;
+  border-radius: 40px;
+  outline: 2px solid rgba(32, 32, 32, 1);
+}
+
+.header__account-btn:hover {
+  opacity: 0.6;
+}
+
+.header__mobile-btn {
+  background-color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__mobile-btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__links_films {
+    display: none;
+  }
+
+  .header__account-btn {
+    display: none;
+  }
+
+  .header__mobile-btn {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 0 14px;
+  }
+
+  .header__links {
+    gap: 14px;
+  }
+
+  .header__button {
+    min-height: 26px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .header__button-green {
+    min-width: 54px;
+  }
+}

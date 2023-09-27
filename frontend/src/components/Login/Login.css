@@ -1,0 +1,160 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    padding: 232px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login {
+    padding: 56px 0 30px;
+  }
+}
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 396px;
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .login__container {
+    justify-content: center;
+    align-items: center;
+    max-width: 260px;
+  }
+}
+
+.login__logo {
+  width: 100%;
+  max-width: 38px;
+  min-height: 38px;
+}
+
+.login__logo:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.login__welcome {
+  margin: 37px 0 40px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: 425px) {
+  .login__welcome {
+    margin: 47px 0 79px;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 425px) {
+  .login__form {
+    max-width: 260px;
+    width: 100%;
+  }
+}
+
+.login__form-text {
+  color: #8b8b8b;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.login__input {
+  border-radius: 8px;
+  background: #2f2f2f;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+
+.login__input:last-of-type {
+  margin-bottom: 0;
+}
+
+.login__button {
+  padding: 0;
+  min-height: 45px;
+  border-radius: 3px;
+  background: #4285f4;
+  margin-top: 178px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  border: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .login__button {
+    margin-top: 267px;
+    font-size: 12px;
+  }
+}
+
+.login__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.login__signin {
+  margin: 17px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 285px;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 425px) {
+  .login__signin {
+    margin: 14px auto;
+    font-size: 12px;
+    max-width: 246px;
+  }
+}
+
+.login__signin-text {
+  margin: 0;
+  padding: 0;
+  color: #8b8b8b;
+}
+
+.login__login-link {
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.login__login-link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

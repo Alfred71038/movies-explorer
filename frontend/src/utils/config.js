@@ -1,0 +1,35 @@
+const DESKTOP_ITEMS = 3
+
+const TABLET_ITEMS = 2
+
+const MOBILE_ITEMS = 2
+
+const MAX_SHOW_FILM_TIME = 40
+
+const EMAIL_REGEX = "[a-zA-Z0-9_.]+@[a-zA-Z0-9_]+\\.[a-z]{2,}"
+
+const NAME_REGEX = "^[A-Za-zА-Яа-яЁё /s -]+$"
+
+const WITH_DISPLAY_DESKTOP = 1023
+
+const WITH_DISPLAY_TABLET = 767
+
+const COUNT_TW = 12
+
+const COUNT_FV = 5
+
+const COUNT_EG = 8
+
+export {
+  DESKTOP_ITEMS,
+  TABLET_ITEMS,
+  MOBILE_ITEMS,
+  MAX_SHOW_FILM_TIME,
+  EMAIL_REGEX,
+  NAME_REGEX,
+  WITH_DISPLAY_DESKTOP,
+  WITH_DISPLAY_TABLET,
+  COUNT_EG,
+  COUNT_FV,
+  COUNT_TW,
+}
